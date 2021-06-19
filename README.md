@@ -11,7 +11,7 @@
 - [ ] Is the right encryption used?
 
 ## Input Validation
-- [ ] Are inputs from external sources validated?
+- [ ] *Inputs*. Are inputs from external sources validated?
 - [ ] Is user input validated by testing type, length, format, and range, and by enforcing appropriate limits?
 - [ ] Are there flaws in regular expression that cause problems with data validation? 
 - [ ] Are exact match approaches used whenever possible? 
