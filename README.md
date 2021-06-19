@@ -1,24 +1,24 @@
 # Secure Code Review Checklist
 
 ## TLDR;
-- [ ] What security vulnerabilities is this code susceptible to?
-- [ ] Are authorization and authentication handled in the right way?
-- [ ] Is (user) input validated, sanitized, and escaped to prevent security attacks such as cross-site scripting, SQL injection?
-- [ ] Is sensitive data like user data, credit card information securely handled and stored?
-- [ ] Does this code change reveal some secret information like keys, passwords, or usernames?
-- [ ] Is data retrieved from external APIs or libraries checked accordingly?
-- [ ] Does error handling or logging expose us to vulnerabilities?
-- [ ] Is the right encryption used?
+- [ ] **Vuln** What security vulnerabilities is this code susceptible to?
+- [ ] **Auth** Are authorization and authentication handled in the right way?
+- [ ] **Inputs** Is (user) input validated, sanitized, and escaped to prevent security attacks such as cross-site scripting, SQL injection?
+- [ ] **Userdata** Is sensitive data like user data, credit card information securely handled and stored?
+- [ ] **Secrets** Does this code change reveal some secret information like keys, passwords, or usernames?
+- [ ] **Externals** Is data retrieved from external APIs or libraries checked accordingly?
+- [ ] **Errors** Does error handling or logging expose us to vulnerabilities?
+- [ ] **Encr** Is the right encryption used?
 
 ## Input Validation
-- [ ] *Inputs*. Are inputs from external sources validated?
-- [ ] Is user input validated by testing type, length, format, and range, and by enforcing appropriate limits?
-- [ ] Are there flaws in regular expression that cause problems with data validation? 
-- [ ] Are exact match approaches used whenever possible? 
-- [ ] If exact match is not possible, is the content of string variables checked for only expected values (allowed list)? 
-- [ ] If allowed listing is not feasible, are entries rejected that contain inappropriate values such as binary data, escape sequences, and comment characters (block list)?
-- [ ] Are XML documents validate against their schemas?
-- [ ] Do you see string concatenations for user input? 
+- [ ] ***Inputs**. Are inputs from external sources validated?
+- [ ]   **360** Is user input validated by testing type, length, format, and range, and by enforcing appropriate limits?
+- [ ]   **Regex** Are there flaws in regular expression that cause problems with data validation? 
+- [ ]   **Exact** Are exact match approaches used whenever possible? 
+- [ ]   **AllowList** If exact match is not possible, is the content of string variables checked for only expected values (allowed list)? 
+- [ ]   **Bad Data** If allowed listing is not feasible, are entries rejected that contain inappropriate values such as binary data, escape sequences, and comment characters (block list)?
+- [ ]   **XML Valid** Are XML documents validate against their schemas?
+- [ ]   Do you see string concatenations for user input? 
 - [ ] Are SQL statements dynamically created by using user input?
 - [ ] Is data validated on the server side?
 - [ ] Is there a strong separation between data and commands?
